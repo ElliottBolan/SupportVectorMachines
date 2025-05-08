@@ -1,0 +1,131 @@
+PS C:\Users\dudee\Desktop\Texts\projects,programs\exb210027 project 4> & C:/Users/dudee/AppData/Local/Programs/Python/Python313/python.exe "c:/Users/dudee/Desktop/Texts/projects,programs/exb210027 project 4/project.py"
+Fetching MNIST dataset...
+Training samples: (10000, 784), Testing samples: (10000, 784)
+Running cross-validation with different kernels and hyperparameters...
+Kernel: linear, C=0.1
+CV Accuracy: 0.9114 ± 0.0065
+Time: 6.84 seconds
+
+Kernel: linear, C=1
+CV Accuracy: 0.9077 ± 0.0069
+Time: 5.93 seconds
+
+Kernel: linear, C=10
+CV Accuracy: 0.9077 ± 0.0069
+Time: 5.99 seconds
+
+Kernel: poly, C=0.1, degree=2
+CV Accuracy: 0.7776 ± 0.0144
+Time: 58.58 seconds
+
+Kernel: poly, C=0.1, degree=3
+CV Accuracy: 0.3415 ± 0.0198
+Time: 64.87 seconds
+
+Kernel: poly, C=1, degree=2
+CV Accuracy: 0.9352 ± 0.0026
+Time: 30.16 seconds
+
+Kernel: poly, C=1, degree=3
+CV Accuracy: 0.8585 ± 0.0081
+Time: 39.49 seconds
+
+Kernel: poly, C=10, degree=2
+CV Accuracy: 0.9506 ± 0.0020
+Time: 20.31 seconds
+
+Kernel: poly, C=10, degree=3
+CV Accuracy: 0.9437 ± 0.0035
+Time: 26.83 seconds
+
+Kernel: rbf, C=0.1, gamma=0.01
+CV Accuracy: 0.4112 ± 0.0189
+Time: 64.89 seconds
+
+Kernel: rbf, C=0.1, gamma=0.1
+CV Accuracy: 0.1125 ± 0.0000
+Time: 73.41 seconds
+
+Kernel: rbf, C=0.1, gamma=scale
+CV Accuracy: 0.8698 ± 0.0048
+Time: 44.02 seconds
+
+Kernel: rbf, C=1, gamma=0.01
+CV Accuracy: 0.7443 ± 0.0058
+Time: 68.37 seconds
+
+Kernel: rbf, C=1, gamma=0.1
+CV Accuracy: 0.1742 ± 0.0021
+Time: 75.46 seconds
+
+Kernel: rbf, C=1, gamma=scale
+CV Accuracy: 0.9334 ± 0.0038
+Time: 27.80 seconds
+
+Kernel: rbf, C=10, gamma=0.01
+CV Accuracy: 0.7631 ± 0.0051
+Time: 64.67 seconds
+
+Kernel: rbf, C=10, gamma=0.1
+CV Accuracy: 0.1771 ± 0.0019
+Time: 79.00 seconds
+
+Kernel: rbf, C=10, gamma=scale
+CV Accuracy: 0.9422 ± 0.0030
+Time: 24.74 seconds
+
+
+Cross-validation Results:
+    kernel          parameters        accuracy  training_time
+0   linear               C=0.1  91.14% ± 0.65%       6.843085
+1   linear                 C=1  90.77% ± 0.69%       5.932890
+2   linear                C=10  90.77% ± 0.69%       5.987761
+3     poly     C=0.1, degree=2  77.76% ± 1.44%      58.582416
+4     poly     C=0.1, degree=3  34.15% ± 1.98%      64.872533
+5     poly       C=1, degree=2  93.52% ± 0.26%      30.155759
+6     poly       C=1, degree=3  85.85% ± 0.81%      39.492257
+7     poly      C=10, degree=2  95.06% ± 0.20%      20.314440
+8     poly      C=10, degree=3  94.37% ± 0.35%      26.826790
+9      rbf   C=0.1, gamma=0.01  41.12% ± 1.89%      64.887679
+10     rbf    C=0.1, gamma=0.1  11.25% ± 0.00%      73.412529
+11     rbf  C=0.1, gamma=scale  86.98% ± 0.48%      44.023605
+12     rbf     C=1, gamma=0.01  74.43% ± 0.58%      68.371020
+13     rbf      C=1, gamma=0.1  17.42% ± 0.21%      75.455987
+14     rbf    C=1, gamma=scale  93.34% ± 0.38%      27.801314
+15     rbf    C=10, gamma=0.01  76.31% ± 0.51%      64.665798
+16     rbf     C=10, gamma=0.1  17.71% ± 0.19%      79.004391
+17     rbf   C=10, gamma=scale  94.22% ± 0.30%      24.741782
+
+Best model from cross-validation:
+Kernel: poly, Parameters: C=10, degree=2
+CV Accuracy: 95.06%
+
+Training best model on full training set...
+Training time: 10.22 seconds
+Test accuracy: 95.43%
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.98      0.98      0.98       986
+           1       0.97      0.98      0.98      1125
+           2       0.94      0.95      0.95       999
+           3       0.94      0.94      0.94      1020
+           4       0.96      0.95      0.96       975
+           5       0.94      0.94      0.94       902
+           6       0.98      0.96      0.97       982
+           7       0.96      0.94      0.95      1042
+           8       0.93      0.93      0.93       975
+           9       0.94      0.95      0.94       994
+
+    accuracy                           0.95     10000
+   macro avg       0.95      0.95      0.95     10000
+weighted avg       0.95      0.95      0.95     10000
+
+Generating confusion matrix...
+Found 457 misclassified examples
+
+----- Summary -----
+Best Model Configuration: poly kernel with C=10, degree=2
+Cross-validation Accuracy: 95.06%
+Test Accuracy: 95.43%
